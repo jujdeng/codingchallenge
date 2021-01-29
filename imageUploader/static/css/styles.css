@@ -1,13 +1,16 @@
 /* BEGIN TASK 2 */
 
 /* Examples  */
-/* body {
-    background-color: red;
+body {
+    background-color: rgb(196, 196, 247);
 }
-
-a {
+/* a {
     color: black;
     font-size:12em;
 } */
+
+h1 {
+    color: blueviolet;
+}
 
 /* END TASK 2 */

@@ -10,8 +10,13 @@
     <h1>Image Upload</h1>
     <!-- BEGIN TASK 1 -->
     <form action="/submit_image">
-        <input type="file" id="image_file" name="image_to_be_uploaded">
-        <input type="submit" id="submission">
+        <div>
+            <input type="file" id="image_file" name="image_to_be_uploaded" onChange="return submit_image()" accept=".png,.jpg,.jpeg">
+            <input type="submit" id="submission">
+        </div>
+        <div id='imgoutput'>
+            <!-- append here -->
+        </div>
     </form>
     <!-- END TASK 1 -->
 </body>

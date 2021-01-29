@@ -8,6 +8,19 @@ $(document).ready(function() {
     // $("#submission").hover(function() {
     //     alert("Form submission button clicked");
     // });
+    $("#submission").click(function() {
+        alert("Submit button clicked");
+        $.post('/submit_image', {
+            // text: "images wooo" 
+        }, function(data) {
+            console.log("Just made a POST Request :)");
+            // document.getElementById('imgoutput').innerHTML = '';
+            $("#imgoutput").append('<img src="' + data + '>');
+            return false;
+        }, 'json');
+    });
+
+    // $("#image_file").on
 
     /* HINT 2:
         After you've created an event listener, how do you make a call to your 
@@ -23,6 +36,7 @@ $(document).ready(function() {
     //     call_a_function(current_text);
     //     return false;
     //   }, 'json');
+
 
     /* END TASK 1 */
 })
