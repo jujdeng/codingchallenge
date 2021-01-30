@@ -31,14 +31,14 @@ def submit_image():        #invoked when sent POST request
         Automatically refreshes our webpage so that user can see the image appended
     """
     # How do we store images in our server?
-    # if request.files:
     print("hi")
-    file = request.files['image_file']
-    # if file.filename != '':
-    file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
-    print("Image saved")
-    # return redirect(request.url)
-    return "whaa"
+    if request.files:
+        print("is it here")
+        file = request.files['file']
+        # if file.filename != '':
+        file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
+        print("Image saved")
+        return redirect(request.url)
 '''
 END TASK 1
 '''

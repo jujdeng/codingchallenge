@@ -11,8 +11,7 @@
     <!-- BEGIN TASK 1 -->
     <form action="/submit_image" method="POST">
         <div>
-            <!-- onChange="return submit_image()" -->
-            <input type="file" id="image_file" name="image_to_be_uploaded" accept=".png,.jpg,.jpeg,.svg">
+            <input type="file" id="image_file" name="image_to_be_uploaded" accept=".png,.jpg,.jpeg,.svg" onChange="return submit_image()">
             <input type="submit" id="submission">
         </div>
         <div id='imgoutput'>

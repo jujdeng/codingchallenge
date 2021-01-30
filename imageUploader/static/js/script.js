@@ -8,14 +8,14 @@ $(document).ready(function() {
     // $("#submission").hover(function() {
     //     alert("Form submission button clicked");
     // });
-
-    // $("#image_file").on
+    $("#image_file").click(function() {
+        alert("File button clicked");
+    });
 
     $("#submission").click(function() {
         console.log("clicked")
         alert("Submit button clicked");
         $.post('/submit_image', {
-            // text: "images wooo" 
         }, function(data) {
             console.log(data);
             $("#imgoutput").append('<img src="' + data + '>');
