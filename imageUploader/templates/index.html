@@ -7,11 +7,12 @@
     <!-- END TASK 2 -->
 </head>
 <body>
-    <h1>Image Upload</h1>
+    <h1>Image Uploader</h1>
     <!-- BEGIN TASK 1 -->
-    <form action="/submit_image">
+    <form action="/submit_image" method="POST">
         <div>
-            <input type="file" id="image_file" name="image_to_be_uploaded" onChange="return submit_image()" accept=".png,.jpg,.jpeg">
+            <!-- onChange="return submit_image()" -->
+            <input type="file" id="image_file" name="image_to_be_uploaded" accept=".png,.jpg,.jpeg,.svg">
             <input type="submit" id="submission">
         </div>
         <div id='imgoutput'>

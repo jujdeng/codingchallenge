@@ -8,19 +8,20 @@ $(document).ready(function() {
     // $("#submission").hover(function() {
     //     alert("Form submission button clicked");
     // });
+
+    // $("#image_file").on
+
     $("#submission").click(function() {
+        console.log("clicked")
         alert("Submit button clicked");
         $.post('/submit_image', {
             // text: "images wooo" 
         }, function(data) {
-            console.log("Just made a POST Request :)");
-            // document.getElementById('imgoutput').innerHTML = '';
+            console.log(data);
             $("#imgoutput").append('<img src="' + data + '>');
             return false;
         }, 'json');
     });
-
-    // $("#image_file").on
 
     /* HINT 2:
         After you've created an event listener, how do you make a call to your 
